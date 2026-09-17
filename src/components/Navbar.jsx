@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ShoppingBag, Sun } from 'lucide-react'
+import { Menu, X, ShoppingBag } from 'lucide-react'
 
-export default function Navbar({ cartItemCount, onCartClick, isYellowTheme, onThemeToggle }) {
+export default function Navbar({ cartItemCount, onCartClick, isYellowTheme }) {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
 
@@ -44,15 +44,6 @@ export default function Navbar({ cartItemCount, onCartClick, isYellowTheme, onTh
               ))}
             </div>
             
-            {/* Theme Toggle */}
-            <button
-              onClick={onThemeToggle}
-              className="ml-4 p-2 text-amber-100 hover:text-yellow-400 transition-colors"
-              title={isYellowTheme ? 'Switch to Amber Theme' : 'Switch to Yellow Theme'}
-            >
-              <Sun size={24} className={isYellowTheme ? 'text-yellow-400' : ''} />
-            </button>
-            
             {/* Cart Icon */}
             <button
               onClick={onCartClick}
@@ -69,15 +60,6 @@ export default function Navbar({ cartItemCount, onCartClick, isYellowTheme, onTh
 
           {/* Mobile menu button and cart */}
           <div className="md:hidden flex items-center gap-2">
-            {/* Theme Toggle */}
-            <button
-              onClick={onThemeToggle}
-              className="p-2 text-amber-100 hover:text-yellow-400 transition-colors"
-              title={isYellowTheme ? 'Switch to Amber Theme' : 'Switch to Yellow Theme'}
-            >
-              <Sun size={24} className={isYellowTheme ? 'text-yellow-400' : ''} />
-            </button>
-            
             {/* Cart Icon */}
             <button
               onClick={onCartClick}

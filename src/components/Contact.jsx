@@ -7,7 +7,7 @@ export default function Contact({ isYellowTheme }) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Information */}
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white  shadow-md p-6">
           <h2 className={`text-xl font-semibold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-6`}>Get in Touch</h2>
           
           <div className="space-y-6">
@@ -76,29 +76,29 @@ export default function Contact({ isYellowTheme }) {
         </div>
 
         {/* Ordering Information */}
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white  shadow-md p-6">
           <h2 className={`text-xl font-semibold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-6`}>How to Order</h2>
           
           <div className="space-y-4 text-gray-700">
             <div className="flex items-start gap-3">
-              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>1</span>
+              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white  w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>1</span>
               <p>Browse our gallery and select the artwork you're interested in</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>2</span>
+              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white  w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>2</span>
               <p>Contact us via phone or email to confirm availability</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>3</span>
+              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white  w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>3</span>
               <p>We'll provide payment details and shipping information</p>
             </div>
             <div className="flex items-start gap-3">
-              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>4</span>
+              <span className={`${isYellowTheme ? 'bg-yellow-500' : 'bg-gold-500'} text-white  w-6 h-6 flex items-center justify-center flex-shrink-0 text-sm font-bold`}>4</span>
               <p>Your artwork will be carefully packaged and shipped to you</p>
             </div>
           </div>
 
-          <div className={`mt-6 p-4 rounded-lg border ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={`mt-6 p-4  border ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <p className="text-sm text-gray-700">
               <strong>Note:</strong> All artworks are original pieces. Each painting is unique 
               and comes with a certificate of authenticity.
@@ -108,7 +108,7 @@ export default function Contact({ isYellowTheme }) {
       </div>
 
       {/* Social Media Follow */}
-      <div className={`mt-8 bg-gradient-to-r ${isYellowTheme ? 'from-yellow-800 to-yellow-900' : 'from-amber-800 to-amber-900'} rounded-lg shadow-md p-6 text-white`}>
+      <div className={`mt-8 bg-gradient-to-r ${isYellowTheme ? 'from-yellow-800 to-yellow-900' : 'from-amber-800 to-amber-900'}  shadow-md p-6 text-white`}>
         <h2 className="text-xl font-semibold mb-4">Follow Us on Social Media</h2>
         <p className="text-amber-100 mb-4">
           Stay updated with new artworks, exhibition news, and behind-the-scenes content
@@ -117,7 +117,7 @@ export default function Contact({ isYellowTheme }) {
           href="https://www.instagram.com/artsajay_/"
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-2 ${isYellowTheme ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-gold-500 hover:bg-gold-600'} text-white px-6 py-3 rounded-md font-medium transition-colors`}
+          className={`inline-flex items-center gap-2 ${isYellowTheme ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-gold-500 hover:bg-gold-600'} text-white px-6 py-3  font-medium transition-colors`}
         >
           <Instagram size={20} />
           Follow on Instagram

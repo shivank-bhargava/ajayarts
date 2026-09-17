@@ -16,7 +16,7 @@ export default function Home({ onAddToCart, isYellowTheme }) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Hero Section */}
-      <div className={`bg-gradient-to-r ${isYellowTheme ? 'from-yellow-900 to-yellow-800' : 'from-amber-900 to-amber-800'} rounded-lg shadow-xl p-8 md:p-12 mb-12 text-white`}>
+      <div className={`bg-gradient-to-r ${isYellowTheme ? 'from-yellow-900 to-yellow-800' : 'from-amber-900 to-amber-800'}  shadow-xl p-8 md:p-12 mb-12 text-white`}>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-bold mb-2 text-amber-100">Ajay Arts</h1>
@@ -42,7 +42,7 @@ export default function Home({ onAddToCart, isYellowTheme }) {
             <img
               src="/Photos/ajay painting through lens.jpg"
               alt="Ajay Garg painting"
-              className="max-h-80 w-auto rounded-lg shadow-lg object-contain"
+              className="max-h-80 w-auto  shadow-lg object-contain"
             />
           </div>
         </div>
@@ -66,9 +66,9 @@ export default function Home({ onAddToCart, isYellowTheme }) {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className={`font-semibold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-1 truncate`}>{art.title}</h3>
+                  <h3 className={`font-semibold text-lg ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-1 truncate`}>{art.title}</h3>
                   <p className="text-sm text-gray-600 mb-1">{art.size}</p>
-                  <p className={`text-lg font-bold ${isYellowTheme ? 'text-yellow-600' : 'text-gold-600'}`}>${art.price.toLocaleString()}</p>
+                  <p className={`text-base font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>${art.price.toLocaleString()}</p>
                 </div>
               </Link>
               
@@ -90,7 +90,7 @@ export default function Home({ onAddToCart, isYellowTheme }) {
 
       {/* About Preview */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white  shadow-md p-6">
           <h2 className={`text-2xl font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-4`}>About the Artist</h2>
           <p className="text-gray-700 mb-4">
             Ajay Garg, born November 21, 1971 in Rajasthan, is a Deaf & Mute artist who 
@@ -106,13 +106,13 @@ export default function Home({ onAddToCart, isYellowTheme }) {
           </p>
           <Link
             to="/about"
-            className={`font-medium inline-flex items-center gap-1 ${isYellowTheme ? 'text-yellow-600 hover:text-yellow-800' : 'text-gold-600 hover:text-gold-800'}`}
+            className={`font-medium inline-flex items-center gap-1 ${isYellowTheme ? 'text-yellow-900 hover:text-yellow-800' : 'text-amber-900 hover:text-gold-800'}`}
           >
             Learn More <ArrowRight size={16} />
           </Link>
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white  shadow-md p-6">
           <h2 className={`text-2xl font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-4`}>Get in Touch</h2>
           <p className="text-gray-700 mb-4">
             Interested in purchasing a piece or have questions? Contact us to inquire about available artworks.
@@ -141,7 +141,7 @@ export default function Home({ onAddToCart, isYellowTheme }) {
           </div>
           <Link
             to="/contact"
-            className={`font-medium inline-flex items-center gap-1 ${isYellowTheme ? 'text-yellow-600 hover:text-yellow-800' : 'text-gold-600 hover:text-gold-800'}`}
+            className={`font-medium inline-flex items-center gap-1 ${isYellowTheme ? 'text-yellow-900 hover:text-yellow-800' : 'text-amber-900 hover:text-gold-800'}`}
           >
             Contact Us <ArrowRight size={16} />
           </Link>
@@ -149,7 +149,7 @@ export default function Home({ onAddToCart, isYellowTheme }) {
       </div>
 
       {/* Call to Action */}
-      <div className={`rounded-lg shadow-md p-8 text-center ${isYellowTheme ? 'bg-yellow-100' : 'bg-amber-100'}`}>
+      <div className={` shadow-md p-8 text-center ${isYellowTheme ? 'bg-yellow-100' : 'bg-amber-100'}`}>
         <h2 className={`text-2xl font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-4`}>Own a Piece of Art</h2>
         <p className="text-gray-700 mb-6">
           Each painting is a unique masterpiece, crafted with traditional techniques by a master artist.
@@ -157,7 +157,7 @@ export default function Home({ onAddToCart, isYellowTheme }) {
         </p>
         <Link
           to="/gallery"
-          className={`inline-flex items-center gap-2 ${isYellowTheme ? 'bg-yellow-800 hover:bg-yellow-900' : 'bg-amber-800 hover:bg-amber-900'} text-white px-6 py-3 rounded-md font-medium transition-colors`}
+          className={`inline-flex items-center gap-2 ${isYellowTheme ? 'bg-yellow-800 hover:bg-yellow-900' : 'bg-amber-800 hover:bg-amber-900'} text-white px-6 py-3  font-medium transition-colors`}
         >
           Explore Gallery
           <ArrowRight size={20} />

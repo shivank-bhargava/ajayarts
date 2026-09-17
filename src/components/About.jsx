@@ -4,9 +4,9 @@ export default function About({ isYellowTheme }) {
       <h1 className={`text-3xl font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-2`}>About the Artist</h1>
       <p className={`text-lg font-semibold mb-8 ${isYellowTheme ? 'text-yellow-600' : 'text-gold-600'}`}>Master of Indian Miniature Painting</p>
       
-      <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+      <div className="bg-white shadow p-6 md:p-8">
         <div className="prose prose-amber max-w-none">
-          <div className={`rounded-lg p-6 border mb-8 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-8 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <p className={`text-xl font-semibold italic mb-2 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>
               "Where There's a Will, There's a Way"
             </p>
@@ -31,14 +31,14 @@ export default function About({ isYellowTheme }) {
           </p>
 
           <h2 className={`text-2xl font-semibold mt-8 mb-4 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>Recognition</h2>
-          <div className={`rounded-lg p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <p className="text-gray-700 italic mb-4">
               "Ajay has magic in his fingers."
             </p>
             <p className="text-sm text-gray-600">— Shri K.K. Hebbar, World-famous artist</p>
           </div>
 
-          <div className={`rounded-lg p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <p className="text-gray-700 italic mb-4">
               "What the blind Surdas did for poetry, Ajay is doing with painting. Ajay has more than just beautiful paintings, he has a beautiful story."
             </p>
@@ -60,13 +60,13 @@ export default function About({ isYellowTheme }) {
           </p>
 
           <h2 className={`text-2xl font-semibold mt-8 mb-4 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>Notable Works</h2>
-          <div className={`rounded-lg p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <p className={`font-semibold mb-1 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>Shiv Parivar Near Kailash Mansarover (2021)</p>
             <p className="text-gray-700">Gouache & Gold Powder on Paper • 10.5" x 7.5"</p>
           </div>
 
           <h2 className={`text-2xl font-semibold mt-8 mb-4 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>Select Awards & Honors</h2>
-          <div className={`rounded-lg p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <ul className="space-y-2 text-gray-700">
               <li>• <strong>2004 — National Award by President Dr. A.P.J. Abdul Kalam</strong></li>
               <li>• <strong>Appreciation Letter from Hon. PM Shri Narendra Modi</strong></li>
@@ -81,7 +81,7 @@ export default function About({ isYellowTheme }) {
           </div>
 
           <h2 className={`text-2xl font-semibold mt-8 mb-4 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>Solo Exhibitions (Select)</h2>
-          <div className={`rounded-lg p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <ul className="space-y-2 text-gray-700">
               <li>• Jehangir Art Gallery, Mumbai — 1994, 1998, 2010, 2014, 2018, 2023</li>
               <li>• Bajaj Art Gallery, Mumbai — 1992, 1993, 1996, 2008, 2013</li>
@@ -95,7 +95,7 @@ export default function About({ isYellowTheme }) {
           </div>
 
           <h2 className={`text-2xl font-semibold mt-8 mb-4 ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>Collections</h2>
-          <div className={`rounded-lg p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
+          <div className={` p-6 border mb-6 ${isYellowTheme ? 'bg-yellow-50 border-yellow-200' : 'bg-amber-50 border-amber-200'}`}>
             <ul className="space-y-2 text-gray-700">
               <li>• Bajaj Group</li>
               <li>• Tata Capital</li>

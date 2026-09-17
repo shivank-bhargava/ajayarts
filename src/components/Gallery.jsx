@@ -75,7 +75,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
       <h1 className={`text-3xl font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-8`}>Art Gallery</h1>
       
       {/* Filters */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+      <div className="bg-white  shadow-md p-6 mb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
           {/* Search */}
           <div className="relative">
@@ -85,7 +85,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
               placeholder="Search by title..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className={`w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
+              className={`w-full pl-10 pr-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
             />
           </div>
 
@@ -94,7 +94,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
             <select
               value={selectedSubject}
               onChange={(e) => setSelectedSubject(e.target.value)}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
+              className={`w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
             >
               <option value="all">All Subjects</option>
               {subjects.filter(s => s !== 'all').map(subject => (
@@ -108,7 +108,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
             <select
               value={selectedMedium}
               onChange={(e) => setSelectedMedium(e.target.value)}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
+              className={`w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
             >
               <option value="all">All Mediums</option>
               {mediums.filter(m => m !== 'all').map(medium => (
@@ -122,7 +122,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
             <select
               value={selectedSize}
               onChange={(e) => setSelectedSize(e.target.value)}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
+              className={`w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
             >
               <option value="all">All Sizes</option>
               <option value="small">Small (under 50 sq. in.)</option>
@@ -136,7 +136,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
+              className={`w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
             >
               <option value="all">All Years</option>
               {years.filter(y => y !== 'all').map(year => (
@@ -150,7 +150,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
+              className={`w-full px-4 py-2 border border-gray-300  focus:outline-none focus:ring-2 ${isYellowTheme ? 'focus:ring-yellow-500' : 'focus:ring-gold-500'}`}
             >
               <option value="all">All Prices</option>
               <option value="under500">Under $500</option>
@@ -172,7 +172,7 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
               setSelectedSize('all')
               setSelectedSubject('all')
             }}
-            className={`mt-4 flex items-center gap-1 text-sm ${isYellowTheme ? 'text-yellow-600 hover:text-yellow-800' : 'text-gold-600 hover:text-gold-800'}`}
+            className={`mt-4 flex items-center gap-1 text-sm ${isYellowTheme ? 'text-yellow-900 hover:text-yellow-800' : 'text-amber-900 hover:text-gold-800'}`}
           >
             <X size={16} />
             Clear filters
@@ -202,10 +202,10 @@ export default function Gallery({ onArtworkClick, onAddToCart, isYellowTheme }) 
                 />
               </div>
               <div className="p-4">
-                <h3 className={`font-semibold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-1 truncate`}>{art.title}</h3>
+                <h3 className={`font-semibold text-lg ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'} mb-1 truncate`}>{art.title}</h3>
                 <p className="text-sm text-gray-600 mb-1">{art.size}</p>
                 {art.year && <p className="text-sm text-gray-500 mb-2">{art.year}</p>}
-                <p className={`text-lg font-bold ${isYellowTheme ? 'text-yellow-600' : 'text-gold-600'}`}>${art.price.toLocaleString()}</p>
+                <p className={`text-base font-bold ${isYellowTheme ? 'text-yellow-900' : 'text-amber-900'}`}>${art.price.toLocaleString()}</p>
               </div>
             </div>
             

@@ -5,6 +5,8 @@ import Home from './components/Home'
 import Gallery from './components/Gallery'
 import ArtworkModal from './components/ArtworkModal'
 import CartModal from './components/CartModal'
+import InquiryModal from './components/InquiryModal'
+import Toast from './components/Toast'
 import About from './components/About'
 import Contact from './components/Contact'
 
@@ -22,7 +24,9 @@ function App() {
   const [selectedArtwork, setSelectedArtwork] = useState(null)
   const [cart, setCart] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
-  const [isYellowTheme, setIsYellowTheme] = useState(false)
+  const [isYellowTheme, setIsYellowTheme] = useState(true)
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false)
+  const [toast, setToast] = useState({ isVisible: false, message: '' })
 
   const handleArtworkClick = (artwork) => {
     setSelectedArtwork(artwork)
@@ -36,11 +40,10 @@ function App() {
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.id === artwork.id)
       if (existingItem) {
-        return prevCart.map(item =>
-          item.id === artwork.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
+        // Item already in cart, show toast notification
+        setToast({ isVisible: true, message: 'Pieces can only be added to cart once' })
+        setTimeout(() => setToast({ isVisible: false, message: '' }), 3000)
+        return prevCart
       }
       return [...prevCart, { ...artwork, quantity: 1 }]
     })
@@ -78,7 +81,6 @@ function App() {
           cartItemCount={cartItemCount}
           onCartClick={() => setIsCartOpen(true)}
           isYellowTheme={isYellowTheme}
-          onThemeToggle={() => setIsYellowTheme(!isYellowTheme)}
         />
         
         <main>
@@ -91,7 +93,13 @@ function App() {
         </main>
 
         {selectedArtwork && (
-          <ArtworkModal artwork={selectedArtwork} onClose={closeModal} onAddToCart={addToCart} isYellowTheme={isYellowTheme} />
+          <ArtworkModal 
+            artwork={selectedArtwork} 
+            onClose={closeModal} 
+            onAddToCart={addToCart} 
+            onInquiryClick={() => setIsInquiryOpen(true)}
+            isYellowTheme={isYellowTheme} 
+          />
         )}
 
         {isCartOpen && (
@@ -105,6 +113,21 @@ function App() {
             isYellowTheme={isYellowTheme}
           />
         )}
+
+        {selectedArtwork && isInquiryOpen && (
+          <InquiryModal
+            artwork={selectedArtwork}
+            isOpen={isInquiryOpen}
+            onClose={() => setIsInquiryOpen(false)}
+            isYellowTheme={isYellowTheme}
+          />
+        )}
+
+        <Toast
+          message={toast.message}
+          isVisible={toast.isVisible}
+          onClose={() => setToast({ isVisible: false, message: '' })}
+        />
 
         {/* Footer */}
         <footer className="bg-amber-900 text-amber-100 py-6 mt-12">
